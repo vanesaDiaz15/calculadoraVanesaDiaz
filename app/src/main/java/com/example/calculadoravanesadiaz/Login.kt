@@ -1,6 +1,5 @@
 package com.example.calculadoravanesadiaz
 
-import VistaCalculator
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -20,12 +19,12 @@ class Login : AppCompatActivity() {
         var user : String = editTextUsr.text.toString()
         var pwd : String = editTextPwd.text.toString()
 
-        if (user.equals(pwd, ignoreCase = true)){
-            var miIntent = Intent(this, VistaCalculator::class.java)
-            miIntent.putExtra("usuario", user)
-            startActivity(miIntent)
-            finish()
-        }
+        var miIntent = Intent(this, Vista::class.java)
+        miIntent.putExtra("usuario", user)
+        miIntent.putExtra("apellido", pwd)
+        startActivity(miIntent)
+        finish()
+
     }
 
     fun salir(view: View) {

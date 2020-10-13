@@ -1,31 +1,31 @@
 package com.example.calculadoravanesadiaz.Activities
 
 class Operations {
-    var n1: Double = 0.0
-    var n2: Double = 0.0
+    var n1: Int = 0
+    var n2: Int = 0
     var operacion: String =""
 
-    constructor(numberOne: Double, numberTwo: Double, operation: String) {
-        this.n1 = numberOne
-        this.n2= numberTwo
+    constructor(numberOne: String, numberTwo: String, operation: String) {
+        this.n1 = numberOne.toInt()
+        this.n2= numberTwo.toInt()
         this.operacion = operation
 
     }
 
 
-    private fun restar(): Double {
+    private fun restar(): Int {
         return n1-n2
     }
 
-    private fun sumar(): Double {
+    private fun sumar(): Int {
         return n1+n2
     }
 
-    private fun dividir(): Double {
+    private fun dividir(): Int {
         return n1/n2
     }
 
-    private fun multiplicar(): Double {
+    private fun multiplicar(): Int {
         return n1 * n2
     }
 

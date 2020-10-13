@@ -1,17 +1,16 @@
+package com.example.calculadoravanesadiaz
+
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import com.example.calculadoravanesadiaz.Activities.Operations
-import com.example.calculadoravanesadiaz.R
 
-
-class VistaCalculator : AppCompatActivity() {
-
-    private var num1: Double = 0.0
-    private var num2: Double = 0.0
+class Vista : AppCompatActivity() {
+    var num1: String = ""
+    var num2: String = ""
     private var lastPressedKey= false
-    private var op : String = ""
+    var op : String = ""
 
     private lateinit var operation: Operations
 
@@ -20,9 +19,10 @@ class VistaCalculator : AppCompatActivity() {
         setContentView(R.layout.calculadora)
 
         var usr : String = intent.getStringExtra("usuario").toString()
+        var apellido : String = intent.getStringExtra("apellido").toString()
 
         var textView = findViewById<TextView>(R.id.textViewUsr)
-        textView.text = "Hola " +usr
+        textView.text = "Hola " +usr + " " + apellido
     }
 
     fun dividir(view: View) {
@@ -43,71 +43,71 @@ class VistaCalculator : AppCompatActivity() {
     }
     fun n7(view: View) {
         if (!lastPressedKey){
-            num1 = 7.0
+            num1 += 7
         }else{
-            num2 = 7.0
+            num2 += 7
         }
     }
     fun n4(view: View) {
         if (!lastPressedKey){
-        num1 = 4.0
-    }else{
-        num2 = 4.0
-    }}
+            num1 += 4
+        }else{
+            num2 += 4
+        }}
     fun n1(view: View) {
         if (!lastPressedKey){
-            num1 = 1.0
+            num1 += 1
         }else{
-            num2 = 1.0
+            num2 += 1
         }
     }
     fun n8(view: View) {
         if (!lastPressedKey){
-            num1 = 8.0
+            num1 += 8
         }else{
-            num2 = 8.0
+            num2 += 8
         }
     }
     fun n5(view: View) {
         if (!lastPressedKey){
-            num1 = 5.0
+            num1 += 5
         }else{
-            num2 = 5.0
+            num2 += 5
         }
     }
     fun n2(view: View) {
         if (!lastPressedKey){
-            num1 = 2.0
+            num1 += 2
         }else{
-            num2 = 2.0
+            num2 += 2
         }
     }
     fun n0(view: View) {
         if (!lastPressedKey){
-            num1 = 0.0
+            num1 += 0
         }else{
-            num2 = 0.0
+            num2 += 0
         }
     }
     fun n9(view: View) {
         if (!lastPressedKey){
-            num1 = 9.0
+            num1 += 9
         }else{
-            num2 = 9.0
+            num2 += 9
         }
     }
     fun n6(view: View) {
         if (!lastPressedKey){
-            num1 = 6.0
+            num1 += 6
         }else{
-            num2 = 6.0
+            num2 += 6
         }
     }
     fun n3(view: View) {
         if (!lastPressedKey){
-            num1 = 3.0
+            num1 += 3
         }else{
-            num2 = 3.0
+            num2 += 3
         }
     }
 
@@ -116,5 +116,4 @@ class VistaCalculator : AppCompatActivity() {
         operation = Operations(num1 , num2, op)
         textViewResult.text = operation.calcular()
     }
-
 }
