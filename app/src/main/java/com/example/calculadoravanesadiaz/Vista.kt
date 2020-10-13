@@ -1,22 +1,30 @@
 package com.example.calculadoravanesadiaz
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.example.calculadoravanesadiaz.Activities.Operations
+
 
 class Vista : AppCompatActivity() {
     var num1: String = ""
     var num2: String = ""
     private var lastPressedKey= false
     var op : String = ""
-
     private lateinit var operation: Operations
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.calculadora)
+
+        if (savedInstanceState != null) {
+            num1 = savedInstanceState.getString("numer1").toString()
+
+            op = savedInstanceState.getString("ope").toString()
+
+            num2 = savedInstanceState.getString("numer2").toString()
+        }
 
         var usr : String = intent.getStringExtra("usuario").toString()
         var apellido : String = intent.getStringExtra("apellido").toString()
@@ -113,7 +121,24 @@ class Vista : AppCompatActivity() {
 
     fun operar(view: View) {
         var textViewResult = findViewById<TextView>(R.id.textViewResultado)
+        textViewResult.text = num1
         operation = Operations(num1 , num2, op)
         textViewResult.text = operation.calcular()
+        num1 = ""
+        num2 = ""
+        op = ""
+        lastPressedKey = false
+    }
+
+    fun borrar(view: View) {
+        var textViewResult = findViewById<TextView>(R.id.textViewResultado)
+        textViewResult.text = ""
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putString("numer1", num1)
+        outState.putString("ope", op)
+        outState.putString("numer2", num2)
+        super.onSaveInstanceState(outState)
     }
 }

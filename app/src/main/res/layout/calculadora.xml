@@ -36,7 +36,8 @@
                 android:layout_weight="25"
                 android:backgroundTint="@color/colorPrimaryDark"
                 android:onClick="n7"
-                android:text="7" />
+                android:text="7"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/button4"
@@ -45,7 +46,8 @@
                 android:layout_weight="25"
                 android:backgroundTint="@color/colorPrimaryDark"
                 android:onClick="n4"
-                android:text="4" />
+                android:text="4"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/button1"
@@ -54,7 +56,8 @@
                 android:layout_weight="25"
                 android:backgroundTint="@color/colorPrimaryDark"
                 android:onClick="n1"
-                android:text="1" />
+                android:text="1"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/buttonPunto"
@@ -62,7 +65,9 @@
                 android:layout_height="0dp"
                 android:layout_weight="25"
                 android:backgroundTint="@color/colorPrimaryDark"
-                android:text="." />
+                android:onClick="borrar"
+                android:text="Borrar"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
 
         <LinearLayout
@@ -78,7 +83,8 @@
                 android:layout_weight="25"
                 android:backgroundTint="@color/colorPrimaryDark"
                 android:onClick="n8"
-                android:text="8" />
+                android:text="8"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/button5"
@@ -87,7 +93,8 @@
                 android:layout_weight="25"
                 android:backgroundTint="@color/colorPrimaryDark"
                 android:onClick="n5"
-                android:text="5" />
+                android:text="5"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/button2"
@@ -96,7 +103,8 @@
                 android:layout_weight="25"
                 android:backgroundTint="@color/colorPrimaryDark"
                 android:onClick="n2"
-                android:text="2" />
+                android:text="2"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/button0"
@@ -105,7 +113,8 @@
                 android:layout_weight="25"
                 android:backgroundTint="@color/colorPrimaryDark"
                 android:onClick="n0"
-                android:text="0" />
+                android:text="0"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
 
         <LinearLayout
@@ -121,7 +130,8 @@
                 android:layout_weight="25"
                 android:backgroundTint="@color/colorPrimaryDark"
                 android:onClick="n9"
-                android:text="9" />
+                android:text="9"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/button6"
@@ -130,7 +140,8 @@
                 android:layout_weight="25"
                 android:backgroundTint="@color/colorPrimaryDark"
                 android:onClick="n6"
-                android:text="6" />
+                android:text="6"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/button3"
@@ -139,7 +150,8 @@
                 android:layout_weight="25"
                 android:backgroundTint="@color/colorPrimaryDark"
                 android:onClick="n3"
-                android:text="3" />
+                android:text="3"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/buttonIgual"
@@ -148,7 +160,8 @@
                 android:layout_weight="25"
                 android:backgroundTint="@color/colorPrimaryDark"
                 android:onClick="operar"
-                android:text="=" />
+                android:text="="
+                android:textColor="#FFFFFF" />
         </LinearLayout>
 
         <LinearLayout
@@ -164,7 +177,8 @@
                 android:layout_weight="25"
                 android:backgroundTint="@android:color/holo_orange_dark"
                 android:onClick="dividir"
-                android:text="/" />
+                android:text="/"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/buttonMult"
@@ -173,7 +187,8 @@
                 android:layout_weight="25"
                 android:backgroundTint="@android:color/holo_orange_dark"
                 android:onClick="multiplicar"
-                android:text="x" />
+                android:text="x"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/buttonRestar"
@@ -182,7 +197,8 @@
                 android:layout_weight="25"
                 android:backgroundTint="@android:color/holo_orange_dark"
                 android:onClick="restar"
-                android:text="-" />
+                android:text="-"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/buttonSumar"
@@ -191,7 +207,8 @@
                 android:layout_weight="25"
                 android:backgroundTint="@android:color/holo_orange_dark"
                 android:onClick="sumar"
-                android:text="+" />
+                android:text="+"
+                android:textColor="#FFFFFF" />
 
         </LinearLayout>
 
@@ -208,6 +225,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:textSize="30sp" />
     </LinearLayout>
 </LinearLayout>
