@@ -63,20 +63,6 @@
             android:layout_weight="75" />
 
         <Button
-            android:id="@+id/button2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="80"
-            android:onClick="acceder"
-            android:text="ACCEDER" />
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="75" />
-
-        <Button
             android:id="@+id/button4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -84,6 +70,20 @@
             android:layout_weight="80"
             android:onClick="salir"
             android:text="SALIR" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="75" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="80"
+            android:onClick="acceder"
+            android:text="ACCEDER" />
 
         <Space
             android:layout_width="0dp"
